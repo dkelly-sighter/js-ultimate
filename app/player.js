@@ -1,15 +1,14 @@
 export class Player {
 
-    speedX = 1;
-    speedY = 1;
-    thickness = 5;
-
     constructor(xlocation, ylocation, team) {
         this.xlocation = xlocation;
         this.ylocation = ylocation;
         this.directionRight = true;
         this.directionDown = false;
         this.team = team;
+        this.thickness = 5;
+        this.speedX = 1;
+        this.speedY = 1;
     }
 
     makeDecisions(field, players) {
