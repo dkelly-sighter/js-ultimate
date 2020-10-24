@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "tests": "jest"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
