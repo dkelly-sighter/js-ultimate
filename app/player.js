@@ -35,7 +35,7 @@ export class Player {
         }
         if (Math.random() < .1) {
             this.directionDown = !this.directionDown;
-        }
+        };
     }
 
     travel() {
