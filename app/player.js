@@ -32,10 +32,10 @@ export class Player {
     initializeDirectionForFrame() {
         if (Math.random() < .1) {
             this.directionRight = !this.directionRight;
-        };
+        }
         if (Math.random() < .1) {
             this.directionDown = !this.directionDown;
-        };
+        }
     }
 
     travel() {

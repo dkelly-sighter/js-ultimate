@@ -27,7 +27,4 @@ describe('field tests', () => {
         expect(beginPath).toHaveBeenCalledTimes(2);
     })
 
-    test('fail', () => {
-        expect(3*2).toBe(20);
-    })
 });
