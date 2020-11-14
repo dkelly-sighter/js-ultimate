@@ -7,27 +7,17 @@ const ultimateEndzoneXFeet = ultimateEndzoneXYars * 3;
 const ultimateFieldYFeet = ultimateFieldYYars * 3;
 
 import { Field } from "./field.js";
-import { TeamFactory } from './teamFactory.js';
+import { TeamsFactory } from "./teamsFactory.js";
 
 let field = new Field(ultimateEndzoneXFeet, ultimateFieldXFeet, ultimateFieldYFeet);
-let players = makeTeams();
+let teamsFactory = new TeamsFactory();
+let players = teamsFactory.makeTeams();
 
 let c = document.getElementById("myCanvas");
 /** @type {CanvasRenderingContext2D} **/
 let ctx = c.getContext("2d");
 
 setInterval(draw, 1/60);
-
-function makeTeams() {
-    const redTeamColor = "#c82124";
-    const blueTeamColor = "#3370d4";
-    let teamFactory = new TeamFactory();
-    let redTeam = teamFactory.buildTeam(redTeamColor);
-    let blueTeam = teamFactory.buildTeam(blueTeamColor);
-
-    let players = redTeam.concat(blueTeam);
-    return players;
-}
 
 function draw( )
 {
